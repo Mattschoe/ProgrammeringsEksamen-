@@ -8,6 +8,7 @@ public class BetalTrigger : MonoBehaviour
     public GameObject fakePlayer;
     public GameObject cutsceneCam;
 
+    //Starter animation når spilleren træder ind i triggeren
     void OnTriggerEnter(Collider other)
     {
         this.gameObject.GetComponent<BoxCollider>().enabled = false;
@@ -16,11 +17,12 @@ public class BetalTrigger : MonoBehaviour
         fakePlayer.SetActive(true);
         StartCoroutine(FinishCut());
     }
-
+    
+    //Flytter spilleren til betalingscenen
     IEnumerator FinishCut()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(2.8f);
         cutsceneCam.SetActive(false);
-        Application.LoadLevel(1);
+        Application.LoadLevel(2);
     }
 }

@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        //Sørger for spilleren ikke kan bevæge sig hvis Inspection-værktøjet er igang
         if (Inspection.active)
         {
             return;
@@ -39,8 +40,7 @@ public class PlayerMovement : MonoBehaviour
             }
 
             //Til at spille "PlayerMove" animationen under bevægelse
-            float moveInput = horizontalInput + verticalInput;
-            if (moveInput == 0f)
+            if (horizontalInput == 0f && verticalInput == 0f)
             {
                 animator.SetBool("isMoving", false);
             }

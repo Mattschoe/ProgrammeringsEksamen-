@@ -23,7 +23,7 @@ public class Payment : MonoBehaviour
 
     IEnumerator TeleportEfterBetaling()
     {
-        yield return new WaitForSeconds(3f);
-        Application.LoadLevel(2);
+        yield return new WaitForSeconds(0.3f);
+        Application.LoadLevel(3);
     }
 }

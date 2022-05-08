@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Får det kamera brugeren ser ud fra til at følge spilleren i programmet
 public class CameraFollow : MonoBehaviour
 {
     public Transform target;
     public float smoothSpeed = 0.125f;
     public Vector3 offset;
-
 
     void LateUpdate()
     {
